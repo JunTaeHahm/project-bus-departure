@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true, // import * as React from 'react'; 를 import React from 'react'로
+    "jsx": "react", // jsx를 리액트환경에서 사용하겠다는 선언
+    "lib": ["ES6", "DOM"], // 프론트 개발할 때 두개 켜놓기
+    "module": "esnext", // 최신모듈 사용하겠다는 선언
+    "sourceMap": true, // 에러난 위치 찾기 편함
+    "moduleResolution": "Node", // 최신 모듈도 node가 해석할 수 있도록
+    "target": "es5", // 컴파일 es5로
+    "forceConsistentCasingInFileNames": false,
+    "strict": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "baseUrl": "./",
+    "paths": {
+      "@assets/*": ["client/src/assets/*"],
+      "@components/*": ["client/src/components/*"],
+      "@hooks/*": ["client/src/hooks/*"],
+      "@layouts/*": ["client/src/layouts/*"],
+      "@pages/*": ["client/src/pages/*"],
+      "@styles/*": ["client/src/styles/*"],
+      "@utils/*": ["client/src/utils/*"]
+    }
+  },
+  "exclude": ["client/node_modules", "../build"]
+}
