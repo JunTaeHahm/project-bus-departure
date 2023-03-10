@@ -1,0 +1,17 @@
+{
+  "filename": "manifest.json",
+  "name": "BUSGO",
+  "short_name": "BUSGO",
+  "description": "기점에서의 버스 출발 시간을 기록하여 시간표로 제작합니다.",
+  "scope": "/",
+  "start_url": ".",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "categories": ["personalization"],
+  "crossorigin": "use-credentials",
+  "background_color": "#fbfdfc",
+  "theme_color": "#fbfdfc",
+  "lang": "ko",
+  "dir": "auto",
+  "display_override": ["fullscreen"]
+}
