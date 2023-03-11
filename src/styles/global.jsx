@@ -45,6 +45,7 @@ const GlobalStyle = () => (
         height: 100%;
         min-height: 100%;
         margin: 0 auto;
+        padding: 0 30px;
       }
       li {
         list-style: none;
