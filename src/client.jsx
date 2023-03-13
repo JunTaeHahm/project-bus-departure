@@ -31,37 +31,37 @@ const queryClient = new QueryClient({
   },
 });
 
-/* PWA */
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    /*===================================================
-                          SW 등록
-      ===================================================*/
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then((registration) => {
-        registration.unregister(); // 기존 SW 해제
-        console.log('register:: SW 등록 성공');
-      })
-      .catch((error) => {
-        console.log('SW 등록 실패, Error:: ', error);
-      });
-    /*===================================================
-                      Work Box 사용
-      ===================================================*/
-    const wb = new Workbox('/sw.js');
+// /* PWA */
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', () => {
+//     /*===================================================
+//                           SW 등록
+//       ===================================================*/
+//     navigator.serviceWorker
+//       .register('/sw.js')
+//       .then((registration) => {
+//         registration.unregister(); // 기존 SW 해제
+//         console.log('register:: SW 등록 성공');
+//       })
+//       .catch((error) => {
+//         console.log('SW 등록 실패, Error:: ', error);
+//       });
+//     /*===================================================
+//                       Work Box 사용
+//       ===================================================*/
+//     const wb = new Workbox('/sw.js');
 
-    wb.addEventListener('installed', (event) => {
-      if (!event.isUpdate) {
-        console.log('installed:: Workbox 설치 완료');
-      }
-    });
-    wb.register();
+//     wb.addEventListener('installed', (event) => {
+//       if (!event.isUpdate) {
+//         console.log('installed:: Workbox 설치 완료');
+//       }
+//     });
+//     wb.register();
 
-    // 자동 업데이트
-    wb.messageSkipWaiting();
-  });
-}
+//     // 자동 업데이트
+//     wb.messageSkipWaiting();
+//   });
+// }
 
 root.render(
   <React.StrictMode>
