@@ -48,7 +48,7 @@ const config = {
   },
 
   entry: {
-    sw: './src/service-worker', // Service Worker
+    // sw: './src/service-worker', // Service Worker
     app: { import: './src/client', asyncChunks: true },
   },
 
