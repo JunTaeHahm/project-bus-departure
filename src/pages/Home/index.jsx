@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import useInput from '@hooks/useInput';
 
+import { Container } from './styles';
+
 const Home = () => {
   const [busNumber, onChangeBusNumber] = useInput('');
   const navigate = useNavigate();
@@ -30,7 +32,7 @@ const Home = () => {
   );
 
   return (
-    <div>
+    <Container>
       <h1>BUSGO</h1>
       <form onSubmit={handleNavigateBusPage}>
         <label htmlFor='busNumber'>
@@ -47,7 +49,7 @@ const Home = () => {
         </label>
         <button type='submit'>이동</button>
       </form>
-    </div>
+    </Container>
   );
 };
 
