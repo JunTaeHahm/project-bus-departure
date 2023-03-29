@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { useGetBusTimeTable } from '@hooks/useGetBusTimeTable';
 
 import { Container, Heading, TableBody, TableHead, TimeTable } from './styles';
 
 const BusPage = () => {
-  const location = useLocation();
-
-  const { busNumber } = location.state;
+  const params = useParams();
+  const busNumber = parseInt(params.bus);
 
   const { data: departures, refetch } = useGetBusTimeTable(busNumber);
 
@@ -53,7 +52,6 @@ const BusPage = () => {
   const saturdaysRows = getRows(result?.saturdays);
   const sundaysRows = getRows(result?.sundays);
 
-  console.log(weekdaysRows);
   return (
     <Container>
       <Heading>BUSGO</Heading>
